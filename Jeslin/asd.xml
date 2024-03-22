@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    <xsl:output method="xml" indent="yes"/>
+
+    <!-- Define namespace for recommendations -->
+    <xsl:namespace-alias stylesheet-prefix="rec" result-prefix="rec" />
+
+    <!-- Define namespace for space products -->
+    <xsl:namespace-alias stylesheet-prefix="space" result-prefix="space" />
+
+    <!-- Define schema for space products -->
+    <xs:schema
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns="http://www.example.com/spaceproducts"
+        targetNamespace="http://www.example.com/spaceproducts"
+        elementFormDefault="qualified">
+
+        <!-- Define element for space products -->
+        <xs:element name="spaceProducts">
+            <xs:complexType>
+                <xs:sequence>
+                    <!-- Define elements for different space products -->
+                    <xs:element name="product" minOccurs="1" maxOccurs="unbounded">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="name" type="xs:string" />
+                                <xs:element name="type" type="xs:string" />
+                                <xs:element name="description" type="xs:string" />
+                                <xs:element name="price" type="xs:decimal" />
+                                <xs:element name="availability" type="xs:string" />
+                                <xs:element name="rating" type="xs:decimal" />
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+    </xs:schema>
+
+    <!-- Map recommendations to spaceProducts -->
+    <xsl:template match="/">
+        <rec:recommendations>
+            <xsl:apply-templates select="rec:recommendations/rec:movie"/>
+            <xsl:apply-templates select="rec:recommendations/rec:series"/>
+        </rec:recommendations>
+    </xsl:template>
+
+    <!-- Transform movie and series to spaceProducts -->
+    <xsl:template match="rec:movie | rec:series">
+        <space:spaceProducts>
+            <xsl:apply-templates select="rec:title | rec:type | rec:availability | rec:releaseYear | rec:rating"/>
+        </space:spaceProducts>
+    </xsl:template>
+
+    <!-- Transform individual elements -->
+    <xsl:template match="rec:title | rec:type | rec:availability | rec:releaseYear | rec:rating">
+        <xsl:element name="{local-name()}">
+            <xsl:value-of select="."/>
+        </xsl:element>
+    </xsl:template>
+
+</xsl:stylesheet>

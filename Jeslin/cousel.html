@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Courier New', Courier, monospace, sans-serif;
+      background-image: url("C:/Users/priya/Downloads/s2-1280.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100vh;
+      position: relative;
+      color: black;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      text-align: center;
+      font-family: 'Courier New', Courier, monospace, sans-serif;
+    }
+
+    .astronaut-img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .fact-card {
+      width: 300px;
+      height: 300px;
+      margin: 10px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+      font-family: 'Courier New', Courier, monospace, sans-serif;
+      font-size: medium;
+      overflow: hidden; /* Hide overflowing content */
+      background-color: #001F3F;
+      color: whitesmoke;
+    }
+
+    .fact-card:hover {
+      background-color: black;
+      color: whitesmoke;
+    }
+
+    .fact-card p {
+      margin: 0; /* Remove default margin for p element */
+    }
+
+    .hidden-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+      display: none;
+    }
+
+    .fact-card:hover .hidden-content {
+      max-height: 100px; /* Adjust the max height based on your content */
+    }
+
+    h2 {
+      color: #007bff;
+    }
+
+    
+
+    .show-content {
+      display: block;
+    }
+
+    footer {
+      background-color: #001F3F;
+      color: #FFD700;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 100px;
+      color: honeydew;
+      text-align: left;
+      margin: 0;
+    }
+
+    h4 {
+      font-family: 'Courier New', Courier, monospace, sans-serif;
+      font-size: 18px;
+      margin: 0;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .scroll-text {
+      animation: scroll 15s linear infinite;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(100%);
+      }
+
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    .carousel {
+      display: flex;
+      overflow: hidden;
+      width: 100%;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .carousel-inner {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-item {
+      box-sizing: border-box;
+      min-width: 100%;
+    }
+  </style>
+
+  <title>Neil Armstrong - Astronaut</title>
+</head>
+<body>
+
+  <h1>Neil A. <br> Armstrong </h1>
+
+
+<div class="container">
+  <div id="factsCarousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <!-- Fact slides go here -->
+
+      <!-- Fact 1 -->
+      <div class="carousel-item active">
+        <div class="fact-card">
+          <h3>1. First Moonwalker</h3>
+          <p>Neil Armstrong was the first human to walk on the moon during the NASA Apollo 11 mission on 20th July 1969...</p>
+          <div class="hidden-content" id="fact1">
+            <p>He made history by taking that "one small step for man, one giant leap for mankind."</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fact 2 -->
+      <div class="carousel-item">
+        <div class="fact-card">
+          <h3>2. Early Interest in Aviation</h3>
+          <p>When Neil was a child, he loved learning about aeroplanes and space...</p>
+          <div class="hidden-content" id="fact2">
+            <p>His early interest paved the way for his remarkable journey into space exploration.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fact 3 -->
+      <div class="carousel-item">
+        <div class="fact-card">
+          <h3>3. Moon Landing Broadcast</h3>
+          <p>Around the world, more than half a billion people watched the Moon Landing. When Neil stepped foot on the moon for the first time, he said the now famous line, “That’s one small step for man, one giant leap for mankind.” Neil walked a distance of about 60 meters on the surface of the moon — that’s roughly the length of 11 Asian elephants!</p>
+          <div class="hidden-content" id="fact3">
+            <p>The broadcast captured the imaginations of people globally and marked a historic moment.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fact 4 -->
+      <div class="carousel-item">
+        <div class="fact-card">
+          <h3>4. Saturn V Rocket</h3>
+          <p>The rocket that launched Neil and his crew into space – the Saturn V rocket – was as tall as a 36-storey building! The Launch Control Center was situated 3.5 miles from the launch pad itself. Neil and his crew talked to the U.S. president at the time, Richard Nixon, on their return from the Apollo 11 mission.</p>
+          <div class="hidden-content" id="fact4">
+            <p>The powerful Saturn V rocket propelled them towards their historic destination.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="fact-card">   
+          <h3>5. The Eagle Has Landed</h3>
+          <p>The Lunar Module that Neil and Buzz piloted together to land on the moon was called the Eagle. It’s where the now famous saying, “The Eagle has landed”, comes from!</p>
+          <div class="hidden-content" id="fact5">
+            <p>The successful landing marked a significant achievement in space exploration.</p>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="carousel-item">
+        <div class="fact-card">   
+          <h3>6. View from the Moon</h3>
+          <p>Not only were Neil and Buzz the first humans to step foot on the moon, but they were also the first humans to view Earth from the moon’s surface. Neil said that while there, he could hold up his thumb and block out the Earth!</p>
+          <div class="hidden-content" id="fact6">
+            <p>Observing Earth from the moon offered a unique perspective on our home planet.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="fact-card">   
+          <h3>7. Moon Dust Collectors</h3>
+          <p>When Neil and Buzz were on the moon, they collected dust materials from the moon’s surface to study back on Earth. In 2017, the samples were sold at auction for £1.4 million — wow!</p>
+          <div class="hidden-content" id="fact7">
+            <p>The moon dust samples became valuable artifacts for scientific research and collectors.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="fact-card">   
+          <h3>8. Reluctant Hero</h3>
+          <p>Neil was considered a great American hero, but a reluctant hero, too. After the Apollo 11 Mission, Neil only stayed with NASA for a further two years. He found the press attention exhausting and decided that he wanted to be a teacher of engineering in his home state of Ohio.</p>
+          <div class="hidden-content" id="fact8">
+            <p>Despite fame, Neil chose a quieter life away from the spotlight.</p>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="carousel-item">
+        <div class="fact-card">   
+          <h3>9. Awards and Recognition</h3>
+          <p>Neil won many awards, including the Presidential Medal of Freedom in 1969, the Hubbard Medal in 1970, the Congressional Space Medal of Honor in 1978, and the General James E. Hill Lifetime Space Achievement Award.</p>
+          <div class="hidden-content" id="fact9">
+            <p>His contributions to space exploration earned him numerous prestigious awards.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="fact-card">   
+          <h3>10. Legacy and Remembrance</h3>
+          <p>Neil died in 2012, but the progress that he made for space travel and our understanding of the Moon is still remembered today!</p>
+          <div class="hidden-content" id="fact10">
+            <p>His legacy continues to inspire future generations of astronauts and scientists.</p>
+          </div>
+        </div>
+      </div>
+
+   </div>
+
+   
+   <!-- Image Carousel -->
+<div id="imageCarousel" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <!-- Image slides go here -->
+
+    <!-- Image 1 -->
+    <div class="carousel-item active">
+        <img src="C:/Users/priya/OneDrive/Desktop/space images/neil/n1.jpeg" class="d-block w-100" alt="Image 1">
+
+    </div>
+
+    <!-- Image 2 -->
+    <div class="carousel-item">
+      <img src="C:\Users\priya\OneDrive\Desktop\space images\neil\n2.jpeg" class="d-block w-100" alt="Image 2">
+    </div>
+
+    <div class="carousel-item">
+      <img src="C:\Users\priya\OneDrive\Desktop\space images\neil\n3.jpeg" class="d-block w-100" alt="Image 2">
+    </div>
+
+    <div class="carousel-item">
+      <img src="C:\Users\priya\OneDrive\Desktop\space images\neil\n4.jpeg" class="d-block w-100" alt="Image 2">
+    </div>
+
+    <div class="carousel-item">
+      <img src="C:\Users\priya\OneDrive\Desktop\space images\neil\n10.jpeg" class="d-block w-100" alt="Image 2">
+    </div>
+
+    <div class="carousel-item">
+      <img src="C:\Users\priya\OneDrive\Desktop\space images\neil\n9.jpeg" class="d-block w-100" alt="Image 2">
+    </div>
+
+    <div class="carousel-item">
+      <img src="C:\Users\priya\OneDrive\Desktop\space images\neil\n11.jpeg" class="d-block w-100" alt="Image 2">
+    </div>
+
+    <div class="carousel-item">
+      <img src="C:\Users\priya\OneDrive\Desktop\space images\neil\n5.jpeg" class="d-block w-100" alt="Image 2">
+    </div>
+
+    <div class="carousel-item">
+      <img src="C:\Users\priya\OneDrive\Desktop\space images\neil\n6.jpeg" class="d-block w-100" alt="Image 2">
+    </div>
+
+    <div class="carousel-item">
+      <img src="C:\Users\priya\OneDrive\Desktop\space images\neil\n7.jpeg" class="d-block w-100" alt="Image 2">
+    </div>
+
+    <div class="carousel-item">
+      <img src="C:\Users\priya\OneDrive\Desktop\space images\neil\n8.jpeg" class="d-block w-100" alt="Image 2">
+    </div>
+
+    
+
+    
+
+  </div>
+
+  <!-- Bootstrap scripts for the image carousel -->
+  <script>
+    const imageCarouselInner = document.querySelector('#imageCarousel .carousel-inner');
+    let currentImageIndex = 0;
+
+    function showImage(index) {
+      const translateValue = -index * 100 + '%';
+      imageCarouselInner.style.transform = 'translateX(' + translateValue + ')';
+    }
+
+    function nextImage() {
+      currentImageIndex = (currentImageIndex + 1) % document.querySelectorAll('#imageCarousel .carousel-item').length;
+      showImage(currentImageIndex);
+    }
+
+    function prevImage() {
+      currentImageIndex = (currentImageIndex - 1 + document.querySelectorAll('#imageCarousel .carousel-item').length) % document.querySelectorAll('#imageCarousel .carousel-item').length;
+      showImage(currentImageIndex);
+    }
+
+    // Ensure DOM is fully loaded before executing the script
+    document.addEventListener('DOMContentLoaded', function () {
+      // Initial image show
+      showImage(currentImageIndex);
+
+      // Set interval for automatic sliding of images
+      setInterval(nextImage, 5000); // 5000 milliseconds = 5 seconds
+    });
+  </script>
+</div>
+
+
+
+    <!-- Carousel Controls -->
+    <a class="carousel-control-prev" href="#factsCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#factsCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+  <!-- Bootstrap scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+  const carouselInner = document.querySelector('.carousel-inner');
+  let currentIndex = 0;
+
+  function showSlide(index) {
+    const translateValue = -index * 100 + '%';
+    carouselInner.style.transform = 'translateX(' + translateValue + ')';
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % document.querySelectorAll('.carousel-item').length;
+    showSlide(currentIndex);
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + document.querySelectorAll('.carousel-item').length) % document.querySelectorAll('.carousel-item').length;
+    showSlide(currentIndex);
+  }
+
+  // Ensure DOM is fully loaded before executing the script
+  document.addEventListener('DOMContentLoaded', function () {
+    // Initial slide show
+    showSlide(currentIndex);
+
+    // Set interval for automatic sliding
+    setInterval(nextSlide, 5000);
+  });
+</script>
+
+</div>
+</body>
+</html>

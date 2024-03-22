@@ -1,0 +1,168 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f8f8;
+}
+
+/* Header Styles */
+#header {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #333;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#navbar {
+    list-style: none;
+}
+
+#navbar li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+#navbar a:hover {
+    color: #ff6600;
+}
+
+#navbar a.active {
+    font-weight: bold;
+}
+
+/* Hero Section Styles */
+#hero {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 50px 0;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#hero h4 {
+    color: #ff6600;
+}
+
+#hero h2 {
+    font-size: 48px;
+}
+
+#hero h1 {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+#hero p {
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+#hero button {
+    background-color: #ff6600;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#hero button:hover {
+    background-color: #333;
+}
+
+/* Feature Section Styles */
+#feature {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.fe-box {
+    flex: 0 0 30%;
+    margin: 15px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.fe-box img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Product Section Styles */
+#product1 {
+    background-color: #f2f2f2;
+    padding: 50px 0;
+}
+
+#product1 h2 {
+    color: #333;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#product1 p {
+    color: #666;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.pro-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.pro {
+    text-align: center;
+    margin-bottom: 30px;
+    flex: 0 0 30%;
+    padding: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.pro:hover {
+    transform: scale(1.05);
+}
+
+.pro img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.des {
+    margin-bottom: 10px;
+}
+
+.star {
+    color: #ffcc00;
+}
+
+.cart {
+    color: #ff6600;
+    font-size: 24px;
+}

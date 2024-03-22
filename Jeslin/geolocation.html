@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Registration</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background: url(https://wallpaperaccess.com/full/178235.jpg) no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            margin: 0;
+            color: #fff;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px;
+            color: white;
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+            font-size: 40px;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .card {
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .card-header {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .card-body {
+            padding: 15px;
+        }
+
+        .btn-primary {
+            background-color: purple;
+            border-color: #000;
+        }
+
+        .btn-primary:hover {
+            background-color: #333;
+            border-color: #333;
+        }
+
+        .card-footer {
+            background-color: black;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #map {
+        height: 50%;
+      }
+       
+      .custom-map-control-button {
+        background-color: #fff;
+        border: 0;
+        border-radius: 2px;
+        box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
+        margin: 10px;
+        padding: 0 0.5em;
+        font: 400 18px Roboto, Arial, sans-serif;
+        overflow: hidden;
+        height: 40px;
+        cursor: pointer;
+      }
+      .custom-map-control-button:hover {
+        background: rgb(235, 235, 235);
+      }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+
+    <!-- Load the Google Maps JavaScript API with the callback function -->
+   
+
+    <script>
+        let map, infoWindow;
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById("map"), {
+                center: { lat: -34.397, lng: 150.644 },
+                zoom: 6,
+            });
+            infoWindow = new google.maps.InfoWindow();
+
+            const locationButton = document.createElement("button");
+
+            locationButton.textContent = "Pan to Current Location";
+            locationButton.classList.add("custom-map-control-button");
+            map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
+
+            locationButton.addEventListener("click", () => {
+                // Try HTML5 geolocation.
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(
+                        (position) => {
+                            const pos = {
+                                lat: position.coords.latitude,
+                                lng: position.coords.longitude,
+                            };
+
+                            infoWindow.setPosition(pos);
+                            infoWindow.setContent("Location found.");
+                            infoWindow.open(map);
+                            map.setCenter(pos);
+                        },
+                        () => {
+                            handleLocationError(true, infoWindow, map.getCenter());
+                        },
+                    );
+                } else {
+                    // Browser doesn't support Geolocation
+                    handleLocationError(false, infoWindow, map.getCenter());
+                }
+            });
+        }
+
+        function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+            infoWindow.setPosition(pos);
+            infoWindow.setContent(
+                browserHasGeolocation
+                    ? "Error: The Geolocation service failed."
+                    : "Error: Your browser doesn't support geolocation.",
+            );
+            infoWindow.open(map);
+        }
+    </script>
+</head>
+<body>
+<header>
+    <h1><b>ASTRO SHOP </b></h1>
+</header>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h4>Shipping Details</h4>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="country">Country</label>
+                                <input type="text" class="form-control" id                                <input type="text" class="form-control" id="country" placeholder="Enter your country" required>
+                                <small class="form-text text-muted">Click the button below to use your current location for country.</small>
+                                <button type="button" class="btn btn-secondary btn-sm" onclick="getLocation()">Use My Location</button>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="flatHouse">Flat/House No</label>
+                                <input type="text" class="form-control" id="flatHouse" placeholder="Enter your flat or house number" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="areaStreet">Area/Street/Village</label>
+                            <input type="text" class="form-control" id="areaStreet" placeholder="Enter your area, street, or village" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="landmark">Landmark</label>
+                            <input type="text" class="form-control" id="landmark" placeholder="Enter a landmark near your location">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="townCity">Town/City</label>
+                                <input type="text" class="form-control" id="townCity" placeholder="Enter your town or city" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="state">State</label>
+                                <input type="text" class="form-control" id="state" placeholder="Enter your state" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="pincode">Pincode</label>
+                                <input type="text" class="form-control" id="pincode" placeholder="Enter your pincode" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="defaultAddress">
+                                    <label class="form-check-label" for="defaultAddress">Make this my default address</label>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                            <h5>Payment Method</h5>
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="creditCard" name="paymentMethod" checked>
+                                <label class="form-check-label" for="creditCard">Credit Card</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="paypal" name="paymentMethod">
+                                <label class="form-check-label" for="paypal">PayPal</label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Register</button>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="map"></div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly" defer></script>
+
+
+</body>
+</html>

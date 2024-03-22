@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table,th,td{
+        border : 1px solid black;
+        border-collapse: collapse;
+    }
+    th , td {
+        padding: 5px;
+    }
+
+</style>
+<body>
+        <h2>XMLHttpRequest object</h2>
+        <button type ="button" onclick="loadXMLDoc()">GET MY CD DATA</button>
+        <br>
+        <br>
+        <table id = "demo"></table>
+        <script>
+            function loadXMLDoc(){
+                const xhttp = new XMLHttpRequest();
+                xhttp.onload=function(){
+                    const xmlDoc = xhttp.responseXML;
+                    const review = xmlDoc.getElementsByTagName("review");
+                    myFunction(review)
+                }
+                xhttp.open("GET", "review.xml");
+                xhttp.send();
+            }
+            function myFunction(review){
+                let table = "<tr><th>reviewId</th><th>reviewTitle</th><th>reviewDate</th><th>reviewLocation</th><th>reviewCity</th><th>reviewStartTime</th><th>reviewEndTime</th><th>rating</th><th>comments</th></tr>";
+                for (let i=0 ; i <review.length ; i++){
+                    table +="<tr><td>"+
+                    review[i].getElementsByTagName("reviewId")
+                    [0].childNodes[0].nodeValue +
+                    "</td><td>" +
+                    review[i].getElementsByTagName("reviewTitle")
+                    [0].childNodes[0].nodeValue +
+                    "</td><td>" +
+                    review[i].getElementsByTagName("reviewDate")
+                    [0].childNodes[0].nodeValue +
+                    "</td><td>" +
+                    review[i].getElementsByTagName("reviewLocation")
+                    [0].childNodes[0].nodeValue +
+                    "</td><td>" +
+                    review[i].getElementsByTagName("reviewCity")
+                    [0].childNodes[0].nodeValue +
+                    "</td><td>" +
+                    review[i].getElementsByTagName("reviewStartTime")
+                    [0].childNodes[0].nodeValue +
+                    "</td><td>" +
+                    review[i].getElementsByTagName("reviewEndTime")
+                    [0].childNodes[0].nodeValue +
+                    "</td><td>" +
+                    review[i].getElementsByTagName("rating")
+                    [0].childNodes[0].nodeValue +
+                    "</td><td>" +
+                    review[i].getElementsByTagName("comments")
+                    [0].childNodes[0].nodeValue +
+                    "</td></tr>" ; 
+                }
+                document.getElementById("demo").innerHTML = table;
+            }
+        </script>
+</body>
+</html>

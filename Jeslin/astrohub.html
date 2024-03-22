@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--<link rel="stylesheet" href="styles.css">-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik+Doodle+Shadow|PLayfair+Display|Merriweather|Bungee+Spice">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    
+    <title>Your Website</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            
+            background: linear-gradient(to right, black, #333, #666);
+        }
+
+        header {
+            position: relative;
+        }
+
+        .video-container {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            border-radius: px;
+        }
+        nav{
+            background-color: rgba(0,0,0,0.8);
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+        nav ul {
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+            text-align:center;
+        }
+        nav li{
+            display: inline-block;
+            margin: 10px 20px;
+            margin-left: 60px;
+            font-family: 'Playfair Display' sans-serif;
+            font-size: 18px;
+        }
+        nav a{
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .logo{
+            margin-right: 20px;
+        }
+        .logo img{
+            width: 150px;
+            height: 100px;
+            border-radius: 10px;
+        }
+        .buttons{
+            display: flex;
+            margin-left: 15px;
+            padding: 8px 15px;
+            background-color:darkslategrey;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        button{
+            border-radius: 10px;
+            border-style: none;
+            background-color: darkslategray;
+            cursor: pointer;
+        }
+    
+        .buttons:hover{
+            background-color: #ddd;
+        }
+        button:hover{
+            background-color: #ddd;
+        }
+
+        video {
+            width: 100%;
+            height: 75%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .text-overlay {
+            position: absolute;
+            top: 40%;
+            left: 80%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            text-align: center;
+
+        }
+        h1{
+            font-size: 5.5rem;
+            margin: 0;
+            font-family:'Bungee Spice',sans-serif;
+        }
+        p{
+            font-family: 'Playfair Display' sans-serif;
+            margin-top: 10px;
+            font-size: 1.5rem;
+        }
+        .video-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+            z-index: 1; 
+        }
+
+        .video-container::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(to left, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+            z-index: 1;
+        }
+        .learn{
+            background-color: #101b39; 
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 8px;
+            border: 2px solid #4CAF50; 
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .learn:hover {
+            background-color: #fff; 
+            color: #4CAF50; 
+        }
+        .feature-section {
+            display: flex;
+            flex-direction:column;
+            align-items: center;
+            text-align: left;
+            justify-content: space-between;
+            padding: 20px;
+            margin-top: 75vh;
+            position: relative;
+            z-index: 2;
+            gap: 10px 0px;
+        }
+        .feature-section h3{
+            font-family: 'Playfair Display' sans-serif;
+            font-size: 2rem;
+            color: #e9eBee;
+            text-align: left;
+        }
+
+        .feature-box {
+            width: 30%;
+            color: #e9e8ee;
+            padding: 20px;
+            background-color: #101b39;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .feature-box img{
+            width: 200px;
+            height:200px;
+            align-self:center ;
+        }xcxv
+        h3{
+            text-align: left;
+        }
+
+        
+        @media (max-width: 768px) {
+            .feature-section {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .feature-box {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+        }
+        .aboutus{
+            width: 50%;
+            text-align: left;
+            padding: 20px;
+        }
+        .aboutus p{
+            font-size: 20px;
+            color:#b4b1b8;
+            text-align: justify;
+            line-height: 1.5;
+            
+        }
+        .footer {
+            background-color: #101b39;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            z-index: 3; /* Ensure the footer is above other sections */
+        }
+
+        .contact-details {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contact-details p {
+            margin: 0;
+            font-family: 'Merriweather', sans-serif;
+            font-size: 1.2rem;
+        }
+
+        
+        
+
+    </style>
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="logo.jpeg">
+            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Education</a></li>
+                <li><a href="#">Community</a></li>
+                <li><a href="#contactus">Contact Us</a></li>
+            </ul>
+            <div class="buttons"><button>Login</button></div>
+                
+            <div class="buttons"><button>Registration</button></div>
+            
+        </nav>
+
+        <div class="video-container">
+            <video autoplay muted loop>
+                <source src="header.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="text-overlay">
+                <h1>Astro Hub</h1>
+                <p>Your gateway to great learning</p>
+                <button class="learn">
+                Start Learning...</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="feature-section text-left">
+        <h3 style="text-align: left;">Featured Learning</h3>
+        <div class="container">
+            <div class="feature-box bg-transparent text-center p-3">
+                <img src="earth.jpg" alt="Feature Image" class="img-fluid rounded-circle">
+                <h2 class="text-center">Earth</h2>
+                <p class="text-muted" style="font-size: 16px;">Learn About our Majestic Planet.</p>
+            </div>
+            <div class="feature-box bg-transparent text-center p-3">
+                <img src="sun.jpg" alt="Feature image of sun" class="img-fluid rounded-circle">
+                <h2 class="text-center">The Sun</h2>
+                <p class="text-muted" style="font-size: 16px;">It's always great to learnabout our shining star!.</p>
+            </div>
+            <div class="feature-box bg-transparent text-align p-3">
+                <img src="moon.jpg" alt="Feature image of moon" class="img-fluid rounded-circle">
+                <h2 class="text-center">The Moon</h2>
+                <p class="text-muted" style="font-size: 16px;">Whose Up for an midnight adventure!!...</p>
+            </div>
+            <div class="aboutus">
+                <h3>About Us</h3>
+                <p>Welcome to Astro Hub EdTech, where the universe of learning meets innovation!
+
+                    At Astro Hub, we believe that education is the celestial force that propels us forward into a future of boundless possibilities. Our mission is to ignite the curiosity of learners and guide them on an astronomical journey of knowledge and discovery.
+
+                    Founded on the principles of excellence and passion for education, Astro Hub EdTech is a cosmic platform designed to cater to learners of all ages. Whether you're exploring the mysteries of the cosmos or delving into the intricacies of earthly subjects, our diverse range of courses is crafted to inspire and empower.
+
+                    What sets Astro Hub apart is our commitment to delivering stellar educational experiences. Our team of expert educators, coupled with cutting-edge technology, ensures that every learner receives a personalized and engaging journey through the cosmos of knowledge.
+
+                    Embark on a learning odyssey with Astro Hub EdTech, where the stars align to illuminate the path to enlightenment. Join us as we propel education to new heights, fostering a community of lifelong learners reaching for the stars and beyond. Your quest for knowledge begins here, with Astro Hub EdTech – Where Education Meets the Cosmos
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" id="contactus">
+        <div class="contact-details">
+            <p>Contact us: support@astrohub.com | Phone: +91 7356 811 1236</p>
+        </div>
+    </footer>
+
+    
+</body>
+</html>

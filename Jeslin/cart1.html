@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASTRO-SHOP</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="astroshop.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+</head>
+<body>
+     <section id="header">
+        <a href="#"><img src="C:\Users\jesli\OneDrive\Desktop\FULL STACK ASTRO HUB\logo1.jpg" class="logo" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="home.html"><i class="fas fa-home"></i>HOME</a></li>
+                <li><a class="active" href="gen.html">MORE</a></li>
+                <li><a href="home.html"><i class="fas fa-shopping-cart"></i>CART</a></li>
+            </ul>
+        </div>
+     </section>
+
+     <section id="page-header">
+        <h2>#stayHome</h2>
+        <p>save more using coupons </p>
+     </section>
+
+     <section id="product1" class="section-p1">
+        <!-- Product cards go here -->
+     </section>
+
+     <!-- Cart display -->
+     <div id="cart">
+        <!-- Cart content will be displayed here -->
+     </div>
+
+     <!-- Total amount -->
+     <div id="total">Total: $500</div>
+
+     <section id="pagination" class="section-p1">
+         <a href="#">1</a>
+         <a href="#">2</a>
+         <a href="#"><i class="fal fa-long-arrow-alt-right"></i></a>
+     </section>
+
+     <section id="newsletter" class="section-p1 section-m1">
+         <div class="newstext">
+             <h4>Sign Up for Newsletter</h4>
+             <p>Get email to recieve new latest shop <span>special offers</span></p>
+         </div>
+         <div class="form">
+             <input type="text" placeholder="Your email address">
+             <button class="normal">Sign Up</button>
+         </div>
+     </section>
+
+     <script>
+         document.addEventListener('DOMContentLoaded', function() {
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    const cartContainer = document.getElementById('cart');
+    const totalElement = document.getElementById('total');
+    let cart = [];
+
+    // Function to update the cart UI
+    function updateCartUI() {
+        cartContainer.innerHTML = '';
+        let totalPrice = 0;
+        cart.forEach(item => {
+            const itemElement = document.createElement('div');
+            itemElement.textContent = `${item.name} - Quantity: ${item.quantity}, Price: $${item.price * item.quantity}`;
+            cartContainer.appendChild(itemElement);
+            totalPrice += item.price * item.quantity;
+        });
+        totalElement.textContent = `Total: $${totalPrice.toFixed(2)}`;
+    }
+
+    // Function to add item to cart
+    function addToCart(name, price) {
+        const existingItem = cart.find(item => item.name === name);
+        if (existingItem) {
+            existingItem.quantity++;
+        } else {
+            cart.push({ name, price, quantity: 1 });
+        }
+        updateCartUI();
+    }
+
+    // Event listener for add to cart buttons
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const name = this.dataset.name;
+            const price = parseFloat(this.dataset.price);
+            addToCart(name, price);
+        });
+    });
+});
+
+     </script>
+</body>
+</html>
