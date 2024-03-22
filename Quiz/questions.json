@@ -1,0 +1,82 @@
+[
+  {
+    "question": "What is the largest planet in our solar system?",
+    "choice1": "Mars",
+    "choice2": "Saturn",
+    "choice3": "Jupiter",
+    "choice4": "Neptune",
+    "answer": 3
+  },
+  {
+    "question": "Which planet is known as the 'Red Planet'?",
+    "choice1": "Earth",
+    "choice2": "Venus",
+    "choice3": "Mars",
+    "choice4": "Jupiter",
+    "answer": 3
+  },
+  {
+    "question": "Which planet is closest to the Sun?",
+    "choice1": "Venus",
+    "choice2": "Mercury",
+    "choice3": "Mars",
+    "choice4": "Earth",
+    "answer": 2
+  },
+  {
+    "question": "What is the name of the largest moon of Saturn?",
+    "choice1": "Ganymede",
+    "choice2": "Titan",
+    "choice3": "Europa",
+    "choice4": "Callisto",
+    "answer": 2
+  },
+  {
+    "question": "What is the name of the galaxy that contains our solar system?",
+    "choice1": "Andromeda",
+    "choice2": "Whirlpool",
+    "choice3": "Milky Way",
+    "choice4": "Sombrero",
+    "answer": 3
+  },
+  {
+    "question": "Which planet has the most moons?",
+    "choice1": "Jupiter",
+    "choice2": "Saturn",
+    "choice3": "Uranus",
+    "choice4": "Neptune",
+    "answer": 1
+  },
+  {
+    "question": "What is the name of the first artificial satellite launched into space?",
+    "choice1": "Vostok 1",
+    "choice2": "Sputnik 1",
+    "choice3": "Explorer 1",
+    "choice4": "Apollo 11",
+    "answer": 2
+  },
+  {
+    "question": "What is the name of the spacecraft that first landed humans on the Moon?",
+    "choice1": "Apollo 11",
+    "choice2": "Soyuz 1",
+    "choice3": "Vostok 1",
+    "choice4": "Mercury 7",
+    "answer": 1
+  },
+  {
+    "question": "What is the phenomenon that occurs when a small body enters the Earth's atmosphere and burns up?",
+    "choice1": "Asteroid",
+    "choice2": "Meteor",
+    "choice3": "Meteorite",
+    "choice4": "Comet",
+    "answer": 2
+  },
+  {
+    "question": "What is the name of the first human to travel into space?",
+    "choice1": "Yuri Gagarin",
+    "choice2": "Neil Armstrong",
+    "choice3": "Buzz Aldrin",
+    "choice4": "Alan Shepard",
+    "answer": 1
+  }
+]
