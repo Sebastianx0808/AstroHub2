@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Space Recommendations</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="rec1.css">
+
+</head>
+<body>
+  <h1 class="text-center mb-4">Movies Recommendations</h1>
+  <div class="container">
+
+    <div class="search-container">
+      <input type="text" id="searchInput" class="form-control mb-3 search-input" placeholder="Search for movies...">
+      <button class="btn btn-primary ml-md-2" onclick="searchMovies()">Search</button>
+    </div>
+
+
+    <div class="row" id="movieList">
+    <div class="row">
+     
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFs2iZuLY71G9lqfyHu_HMTXpn2J618bcPLg&usqp=CAU" class="card-img-top" alt="Movie">
+          <div class="card-body">
+            <h5 class="card-title">Interstellar</h5>
+            <p class="card-text">A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.</p>
+            <a href="https://www.netflix.com/" class="btn btn-primary" target="_blank">Watch Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdc6t9D1AyEFm0-oyGrbIe-SISixb9YoWz3w&s" class="card-img-top" alt="Movie">
+          <div class="card-body">
+            <h5 class="card-title">Apollo 13</h5>
+            <p class="card-text">NASA must devise a strategy to return Apollo 13 to Earth safely after the spacecraft undergoes massive internal damage putting the lives of the three astronauts on board in jeopardy.</p>
+            <a href="https://www.mxplayer.in/" class="btn btn-primary" target="_blank">Watch Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://miro.medium.com/v2/resize:fit:633/1*wTrseFDs54ebDUKChhw6ww.jpeg" class="card-img-top" alt="Movie">
+          <div class="card-body">
+            <h5 class="card-title">Solaris</h5>
+            <p class="card-text">A psychologist is sent to a station orbiting a distant planet in order to discover what has caused the crew to go insane.</p>
+            <a href="https://www.primevideo.com/" class="btn btn-primary" target="_blank">Watch Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk-s9-s3Hb7qqBLgT8BS5BbKQ1nizZtSMKEA&s" class="card-img-top" alt="Movie">
+          <div class="card-body">
+            <h5 class="card-title">Hidden Figures</h5>
+            <p class="card-text">The story of a team of female African-American mathematicians who served a vital role in NASA during the early years of the U.S. space program.</p>
+            <a href="https://www.hotstar.com/" class="btn btn-primary" target="_blank">Watch Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcce7W7tLfPk51NiNW9xMpF9ziXfqt3ReaAg&usqp=CAU" class="card-img-top" alt="Movie">
+
+          <div class="card-body">
+            <h5 class="card-title">The Right Stuff</h5>
+            <p class="card-text">The U.S. space program's development from the breaking of the sound barrier to selection of the Mercury 7 astronauts, from a group of test pilots with a more seat-of-the-pants approach than the program's more cautious engineers preferred.</p>
+            <a href="https://www.mxplayer.in/" class="btn btn-primary" target="_blank">Watch Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFkXF0NRlvEP4SIaJOD3f1BYz8bO48qy6oig&s" class="card-img-top" alt="Movie">
+          <div class="card-body">
+            <h5 class="card-title">Alien</h5>
+            <p class="card-text">The crew of a commercial spacecraft encounters a deadly lifeform after investigating a mysterious transmission of unknown origin.</p>
+            <a href= "https://www.mxplayer.in/"class="btn btn-primary" target="_blank">Mx Player</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRP43pkJ0WILeNr8nW6gK4ssACg7OtmotKb6w&s" class="card-img-top" alt="Movie">
+          <div class="card-body">
+            <h5 class="card-title">Sunshine</h5>
+            <p class="card-text">A team of international astronauts is sent on a dangerous mission to reignite the dying Sun with a nuclear fission bomb in 2057.</p>
+            <a href= "https://www.primevideo.com/" class="btn btn-primary" target="_blank">Watch Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfSxScRqPVsduGRDYUpaninJ54nWUoXCv__A&usqp=CAU" class="card-img-top" alt="Movie">
+          <div class="card-body">
+            <h5 class="card-title">First Man</h5>
+            <p class="card-text">A look at the life of the astronaut, Neil Armstrong, and the legendary space mission that led him to become the first man to walk on the Moon on July 20, 1969.</p>
+            <a href= "https://www.primevideo.com/" class = "btn btn-primary" target="_blank">Amazon Prime</a><br>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzZkj2bVJjzhclhTTh4vmgLzIfInAjQ7Jtpg&usqp=CAU" class="card-img-top" alt="Movie">
+          <div class="card-body">
+            <h5 class="card-title">Spaceman</h5>
+            <p class="card-text">Half a year into his solo mission on the edge of the solar system, an astronaut concerned with the state of his life back on Earth is helped by an ancient creature he discovers in the bowels of his ship.</p>
+            <a href= "https://www.primevideo.com/" class = "btn btn-primary" target="_blank">Amazon Prime</a><br>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvsZay_hx6lJdJYJ7pmKDll9cBdwamW19uRw&usqp=CAU" class="card-img-top" alt="Movie">
+          <div class="card-body">
+            <h5 class="card-title">Gravity</h5>
+            <p class="card-text">Dr Ryan Stone, an engineer on her first time on a space mission, and Matt Kowalski, an astronaut on his final expedition, have to survive in space after they are hit by debris while spacewalking.</p>
+            <a href= "https://www.primevideo.com/" class = "btn btn-primary" target="_blank">Amazon Prime</a><br>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg8Yc9dqmBTE6brbOmJIFjKuZVeU26KuoHZh9naUc3r_6pkQ3U4PcPQC1Bou7cSCT8qs0&usqp=CAU" class="card-img-top" alt="Movie">
+          <div class="card-body">
+            <h5 class="card-title">Moonfall</h5>
+            <p class="card-text">A mysterious force knocks the moon from its orbit and sends it hurtling on a collision course toward earth.
+
+            </p>
+            <a href= "https://www.primevideo.com/" class = "btn btn-primary" target="_blank">Amazon Prime</a><br>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMyGKXCwslcUHeTaSMkAk8GvuYZ-sC7hB9zA&usqp=CAU" class="card-img-top" alt="Movie">
+          <div class="card-body">
+            <h5 class="card-title">Moon</h5>
+            <p class="card-text">Astronaut Sam Bell has a quintessentially personal encounter toward the end of his three-year stint on the Moon, where he, working alongside his computer, GERTY, sends back to Earth parcels of a resource that has helped diminish our planet's power problems.</p>
+            <a href= "https://www.primevideo.com/" class = "btn btn-primary" target="_blank">Amazon Prime</a><br>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMJ_sKzpjwcAYzWAfQ7Q8I6Is5874rSJ7u4w&usqp=CAU" class="card-img-top" alt="Movie">
+          <div class="card-body">
+            <h5 class="card-title">2001 Space Odynessy</h5>
+            <p class="card-text">After uncovering a mysterious artifact buried beneath the Lunar surface, a spacecraft is sent to Jupiter to find its origins: a spacecraft manned by two men and the supercomputer HAL 9000.</p>
+            <a href= "https://www.primevideo.com/" class = "btn btn-primary" target="_blank">Amazon Prime</a><br>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhoVRX4j2dm3e5qPXAaH5cgZqTGs-bgkG4GRvCCMjcqH-IVEajKfLoPet5ZmzclheXcNU&usqp=CAU" class="card-img-top" alt="Movie">
+          <div class="card-body">
+            <h5 class="card-title">Life</h5>
+            <p class="card-text">A team of scientists aboard the International Space Station discover a rapidly evolving life form that caused extinction on Mars and now threatens all life on Earth.
+
+            </p>
+            <a href= "https://www.primevideo.com/" class = "btn btn-primary" target="_blank">Amazon Prime</a><br>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR165PSYyKoIb7bo5Iu8UAuy8JQw2fGMnd-bwUqgwG86FaTjiZs2ifAU_k3iga0GWYWa28&usqp=CAU" class="card-img-top" alt="Movie">
+          <div class="card-body">
+            <h5 class="card-title">Apollo 18</h5>
+            <p class="card-text">Decades-old found footage from NASA's abandoned Apollo 18 mission, where three American astronauts were sent on a secret expedition, reveals the reason the U.S. has never returned to the moon.</p>
+            <a href= "https://www.primevideo.com/" class = "btn btn-primary" target="_blank">Amazon Prime</a><br>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV3UpAthk2a9ab-Fl-EMKpVo0ZSn7DwFq6SrER8mEi5dLp9so_G2s2FSBsIy6X6lvwlrs&usqp=CAU" class="card-img-top" alt="Movie">
+          <div class="card-body">
+            <h5 class="card-title">Mission to Mars</h5>
+            <p class="card-text">When the first manned mission to Mars meets with a catastrophic and mysterious disaster after reporting an unidentified structure, a rescue mission is launched to investigate the tragedy and bring back any survivors.
+            </p>
+            <a href= "https://www.primevideo.com/" class = "btn btn-primary" target="_blank">Amazon Prime</a><br>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd3EWbpVsK5S3jZ8vZZzajULJSwWyc_ZgTZpWvzXR8E4661yrFmhhqf-Y35HZacQYPQm8&usqp=CAU" class="card-img-top" alt="Movie">
+          <div class="card-body">
+            <h5 class="card-title">The Space Walker</h5>
+            <p class="card-text">Trying to hold the lead in the Space Race, the Soviet Union is preparing two cosmonauts for the first spacewalk.</p>
+            <a href= "https://www.primevideo.com/" class = "btn btn-primary" target="_blank">Amazon Prime</a><br>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMw9jzmGN3n_4NIgCiP7OuNLCyay-la2rtvcQqxL19no2sJaKvsqbZIzRQLYQgiFwMHGo&usqp=CAU" class="card-img-top" alt="Movie">
+          <div class="card-body">
+            <h5 class="card-title">Conquest of Space</h5>
+            <p class="card-text">An American-led team of International astronauts leave their space station on the first mission to Mars, but the captain's religious beliefs may get in the way.
+
+            </p>
+            <a href= "https://www.primevideo.com/" class = "btn btn-primary" target="_blank">Amazon Prime</a><br>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_Ngai4C4-3cH6ekctld7flxzv9BDYqV9jIdsQ5TK1exF9Apz6JDxekjZiITctL-aWqF8&usqp=CAU" class="card-img-top" alt="Movie">
+          <div class="card-body">
+            <h5 class="card-title">Europa Report</h5>
+            <p class="card-text">An international crew of astronauts undertakes a privately funded mission to search for life on Jupiter's fourth largest moon.
+
+            </p>
+            <a href= "https://www.primevideo.com/" class = "btn btn-primary" target="_blank">Amazon Prime</a><br>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNnCRYAE3wPhq6vDBZB5oOPL4CpNf6-rZUhQz2xP4XBxg6y_KIxet8XMRsodYOxY-5a14&usqp=CAU" class="card-img-top" alt="Movie">
+          <div class="card-body">
+            <h5 class="card-title">Stowaway</h5>
+            <p class="card-text">A three-person crew on a mission to Mars faces an impossible choice when an unplanned passenger jeopardizes the lives of everyone on board.
+
+            </p>
+            <a href= "https://www.primevideo.com/" class = "btn btn-primary" target="_blank">Amazon Prime</a><br>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRDHVB89Y6zQAJdB4WJGqoTKCKyKMkErbxfGwqNEqzzGJ-FqCHob84bU0DuOftd8ZnKpo&usqp=CAU" class="card-img-top" alt="Movie">
+          <div class="card-body">
+            <h5 class="card-title">The Astronaut Farmer</h5>
+            <p class="card-text">A NASA astronaut, forced to retire years earlier so he could save his family farm, has never given up his dream of space travel and looks to build his own rocket, despite the government's threats to stop him.
+
+            </p>
+            <a href= "https://www.primevideo.com/" class = "btn btn-primary" target="_blank">Amazon Prime</a><br>
+          </div>
+        </div>
+      </div>
+
+
+      
+    </div>
+  </div>
+  <p id="noResultsMessage" class="text-center" style="display: none;">Oops!!! No results found.</p>
+</div>
+<footer class="footer mt-auto py-3">
+  <div class="container text-center">
+    <p>&copy; AstroHUB Movies Recommendations</p>
+    <p><a href="h1.html">Back to Home</a></p>
+  </div>
+</footer>
+</div>
+
+
+<!-- Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+  // Function to search movies
+  function searchMovies() {
+    var input, filter, cards, cardContainer, title, i;
+    input = document.getElementById("searchInput");
+    filter = input.value.toUpperCase();
+    cardContainer = document.getElementById("movieList");
+    cards = cardContainer.getElementsByClassName("col-md-4");
+
+    // Loop through all movies, and hide those who don't match the search query
+    var found = false;
+    for (i = 0; i < cards.length; i++) {
+      title = cards[i].querySelector(".card-title");
+      if (title.innerText.toUpperCase().indexOf(filter) > -1) {
+        cards[i].style.display = "";
+        found = true;
+      } else {
+        cards[i].style.display = "none";
+      }
+    }
+
+    // Display message if no results found
+    var noResultsMessage = document.getElementById("noResultsMessage");
+    if (!found) {
+      noResultsMessage.style.display = "block";
+    } else {
+      noResultsMessage.style.display = "none";
+    }
+  }
+</script>
+</body>
+</html>

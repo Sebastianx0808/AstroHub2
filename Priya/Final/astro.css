@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace, sans-serif;
+  background-image: url("https://i.pinimg.com/236x/5d/2f/96/5d2f969382053c7276671847e8bef877.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  color: black;
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace, sans-serif;
+}
+
+.fact-carousel {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.fact-carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.fact-card {
+  width: 100%;
+  height: 300px;
+  margin-right: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  font-family: 'Courier New', Courier, monospace, sans-serif;
+  font-size: 16px;
+  overflow: hidden;
+  background-color: black;
+  color: whitesmoke;
+  display: flex; /* Add this line */
+  flex-direction: column; /* Add this line */
+}
+
+.fact-card:hover {
+  background-color: #001F3F;
+  color: whitesmoke;
+}
+
+.fact-card p {
+  margin: 15px;
+}
+
+.hidden-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.fact-card:hover .hidden-content {
+  max-height: 100px;
+}
+
+h2 {
+  color: #007bff;
+}
+
+footer {
+  background-color: #001F3F;
+  color: #FFD700;
+  text-align: center;
+  padding: 10px;
+  margin-top: 90px;
+
+}
+
+h1 {
+  font-size: 100px;
+  color: honeydew;
+  text-align: left;
+  margin: 0;
+}
+
+h4 {
+  font-family: 'Courier New', Courier, monospace, sans-serif;
+  font-size: 18px;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.scroll-text {
+  animation: scroll 15s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: auto;
+}
+
+

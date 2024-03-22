@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="code.css">
+    </head>
+    <body>
+
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+              <div><br><br><br><br><br>
+                <h1>Astronauts</h1><br>
+                <p>Stepping Beyond boundaries, leaving footprints on the moon.</p>
+                <p>Explore the stories of those who have set foot on the moon.</p>
+              </div>
+            </nav>
+        </header>
+        
+        
+          <div class="slider">
+            
+            <div class="item item4">
+                <h5> <a href ="Bean.html">Alan Bean </a></h5>
+            </div>
+
+            <div class="item item3">
+                <h5><a href="Pete.html">Charles Pete" Conrad</a></h5>
+            </div>
+
+            <div class="item item2">
+                <h5> <a href ="Buzz.html">Buzz Aldrin </a></h5>
+            </div>
+
+            <div class="item item1">
+                <h5><a href="Neil.html">Neil Armstrong</a></h5>
+            </div>
+
+            <div class="item item5">
+                <h5> <a href ="Alan.html">Alan Shepard</a> </h5>
+            </div>
+
+            <div class="item item6">
+                <h5> <a href ="Edgar.html">Edgar Mitchell</a> </h5>
+            </div>
+
+            <div class="item item7">
+                <h5><a href ="David.html"> David Scott </a></h5>
+            </div>
+
+            <div class="item item8">
+                <h5><a href ="James.html"> James Irwin </a></h5>
+            </div>
+
+            <button id="next">></button>
+            <button id="prev"><</button>
+        </div>
+    
+       <script>
+        let items = document.querySelectorAll('.slider .item');
+let active = 3;
+function loadShow(){
+    items[active].style.transform = `none`;
+    items[active].style.zIndex = 1;
+    items[active].style.filter = 'none';
+    items[active].style.opacity = 1;
+    // show after
+    let stt = 0;
+    for(var i = active + 1; i < items.length; i ++){
+        stt++;
+        items[i].style.transform = `translateX(${120*stt}px) scale(${1 - 0.2*stt}) perspective(16px) rotateY(-1deg)`;
+        items[i].style.zIndex = -stt;
+        items[i].style.filter = 'blur(5px)';
+        items[i].style.opacity = stt > 2 ? 0 : 0.6;
+    }
+     stt = 0;
+    for(var i = (active - 1); i >= 0; i --){
+        stt++;
+        items[i].style.transform = `translateX(${-120*stt}px) scale(${1 - 0.2*stt}) perspective(16px) rotateY(1deg)`;
+        items[i].style.zIndex = -stt;
+        items[i].style.filter = 'blur(5px)';
+        items[i].style.opacity = stt > 2 ? 0 : 0.6;
+    }
+}
+loadShow();
+let next = document.getElementById('next');
+let prev = document.getElementById('prev');
+next.onclick = function(){
+   active = active + 1 < items.length ?  active + 1 : active;
+   loadShow();
+}
+prev.onclick = function(){
+    active = active - 1 >= 0 ? active -1 : active;
+    loadShow();
+}
+       </script>
+    </body>
+    </html>

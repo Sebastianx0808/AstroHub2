@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="bookApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Space Books Recommendations</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel ="stylesheet" href ="book.css">
+  
+</head>
+<body>
+  <div class="container" ng-controller="BookController">
+    <div class="header">
+      <h1 class="text-center mb-4">Space Books Recommendations</h1>
+      <p class="text-center">Explore the universe through these captivating reads.</p>
+    </div>
+
+    <div class="search-container">
+      <input type="text" id="searchInput" class="form-control mb-3 search-input" placeholder="Search for books..." ng-model="searchQuery">
+      <button class="btn btn-primary ml-md-2" ng-click="searchBooks()">Search</button>
+    </div>
+
+    <div class="row" id="bookList">
+      <div class="col-md-4 d-flex" ng-repeat="book in books | filter:searchQuery">
+        <div class="book-card">
+          <img ng-src="{{ book.image }}" class="card-img-top" alt="Book Cover">
+          <div class="card-body">
+            <h5 class="card-title">{{ book.title }}</h5>
+            <p class="card-text">{{ book.description }}</p>
+            <a ng-href="{{ book.link }}" class="btn btn-primary" target="_blank">Read Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p id="noResultsMessage" class="text-center" style="display: none;">Oops!!! No results found.</p>
+  </div>
+
+  <footer class="footer mt-auto py-3">
+    <div class="container text-center">
+      <p>&copy; AstroHUB Books Recommendations</p>
+      <p><a href="h1.html">Back to Home</a></p>
+    </div>
+  </footer>
+</div>
+
+  <!-- Bootstrap JS and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- AngularJS script -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+  <script>
+    var app = angular.module('bookApp', []);
+  
+    app.controller('BookController', function($scope) {
+      $scope.books = [
+        {
+          title: "The Human Cosmos: A Secret History of the Stars",
+          description: "A journey through space and time, exploring the universe and our place within it.",
+          image: "https://cdn.mos.cms.futurecdn.net/Nb8sLVJpEG3hVa7F38xGEc-1200-80.jpg.webp",
+          link: "https://www.amazon.com/Cosmos-Carl-Sagan/dp/0345539435"
+        },
+        {
+          title: "Constellations: The Story of Space Told Through the 88 Known Star Patterns in the Night Sky",
+          description: "A journey through space and time, exploring the universe and our place within it.",
+          image: "https://cdn.mos.cms.futurecdn.net/oj2ApttAxguH46rEdoBkLc-1200-80.jpeg.webp",
+          link: "https://www.amazon.com/Cosmos-Carl-Sagan/dp/0345539435"
+        },
+        {
+          title: "Missions To Mars",
+          description: "A journey through space and time, exploring the universe and our place within it.",
+          image: "https://cdn.mos.cms.futurecdn.net/cJo3dK8eMnhrzSep34cWqb-1200-80.jpg.webp",
+          link: "https://www.amazon.com/Cosmos-Carl-Sagan/dp/0345539435"
+        },
+        {
+          title: "Stars and Planets: The Most Complete Guide to the Stars, Planets, Galaxies, and Solar System",
+          description: "A journey through space and time, exploring the universe and our place within it.",
+          image: "https://cdn.mos.cms.futurecdn.net/pdZ44soLbEX3pDVBDGUyib-1200-80.jpg.webp",
+          link: "https://www.amazon.com/Cosmos-Carl-Sagan/dp/0345539435"
+        },
+        {
+          title: "Sun Moon Earth",
+          description: "A journey through space and time, exploring the universe and our place within it.",
+          image: "https://cdn.mos.cms.futurecdn.net/iwmcEeVeZsGPCZcSbjCtqB-1200-80.jpg.webp",
+          link: "https://www.amazon.com/Cosmos-Carl-Sagan/dp/0345539435"
+        },
+        {
+          title: "The Mysteries of the Universe",
+          description: "A journey through space and time, exploring the universe and our place within it.",
+          image: "https://cdn.mos.cms.futurecdn.net/PoLk2dcnefVUMqepU8hLNb-1200-80.jpg.webp",
+          link: "https://www.amazon.com/Cosmos-Carl-Sagan/dp/0345539435"
+        },
+        {
+          title: "The Science of Interstellar",
+          description: "A journey through space and time, exploring the universe and our place within it.",
+          image: "https://cdn.mos.cms.futurecdn.net/KeRuMacvp5YfgxMqikR4bb-1200-80.jpeg.webp",
+          link: "https://www.amazon.com/Cosmos-Carl-Sagan/dp/0345539435"
+        },
+        {
+          title: "The Astrophotography Manual: A Practical and Scientific Approach to Deep Sky Imaging",
+          description: "A journey through space and time, exploring the universe and our place within it.",
+          image: "https://cdn.mos.cms.futurecdn.net/EMPJFC4MJURmrVTfzwLaCb-1200-80.jpg.webp",
+          link: "https://www.amazon.com/Cosmos-Carl-Sagan/dp/0345539435"
+        },
+        {
+          title: "The Demon-Haunted World: Science as a Candle in the Dark",
+          description: "A journey through space and time, exploring the universe and our place within it.",
+          image: "https://cdn.mos.cms.futurecdn.net/TpRsVnHvPQfLqTvmNbwTwB-1200-80.jpg.webp",
+          link: "https://www.amazon.com/Cosmos-Carl-Sagan/dp/0345539435"
+        },
+        {
+          title: "Hubble Legacy: 30 Years of Discoveries and Images",
+          description: "A journey through space and time, exploring the universe and our place within it.",
+          image: "https://cdn.mos.cms.futurecdn.net/tFKAvSBDdRvSzGbJ3LYazb-1200-80.jpg.webp",
+          link: "https://www.amazon.com/Cosmos-Carl-Sagan/dp/0345539435"
+        },
+        {
+          title: "Cosmos",
+          description: "A journey through space and time, exploring the universe and our place within it.",
+          image: "https://cdn.mos.cms.futurecdn.net/Tv3wxyxEPbRGCGGzeABmMX-1200-80.jpg.webp",
+          link: "https://www.amazon.com/Cosmos-Carl-Sagan/dp/0345539435"
+        },
+        {
+          title: "Back to earth",
+          description: "A journey through space and time, exploring the universe and our place within it.",
+          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7jvgr478SFGGwryWIhIHgb_wM-rJlmeyvQQ&s",
+          link: "https://www.amazon.com/Cosmos-Carl-Sagan/dp/0345539435"
+        },
+        {
+          title: "The Hitchhiker's Guide to the Galaxy",
+          description: "A comedic science fiction series following the misadventures of Arthur Dent and his alien friend Ford Prefect.",
+          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzNBeOfJLh6p2KTn892Q5jbm2NIS_bz_P3ew&s",
+          link: "https://www.amazon.com/Hitchhikers-Guide-Galaxy-Douglas-Adams/dp/0345391802"
+        },
+        {
+          title: "Black Hole Survival Guide",
+          description: "A journey through space and time, exploring the universe and our place within it.",
+          image: "https://cdn.mos.cms.futurecdn.net/sGCFdzYhvHE5nAnKYrbv4b-1200-80.jpg.webp",
+          link: "https://www.amazon.com/Cosmos-Carl-Sagan/dp/0345539435"
+        },
+        {
+          title: "What We See in the Stars: An Illustrated Tour of the Night Sky",
+          description: "A journey through space and time, exploring the universe and our place within it.",
+          image: "https://cdn.mos.cms.futurecdn.net/bRKAL3DXEc5Rb4i3R3XpUc-1200-80.jpg.webp",
+          link: "https://www.amazon.com/Cosmos-Carl-Sagan/dp/0345539435"
+        },
+        {
+          title: "Black Holes and Time Warps: Einstein's Outrageous Legacy",
+          description: "A journey through space and time, exploring the universe and our place within it.",
+          image: "https://cdn.mos.cms.futurecdn.net/V5Kv5zPbTQibUBm4hMH3AX-1200-80.jpg.webp",
+          link: "https://www.amazon.com/Cosmos-Carl-Sagan/dp/0345539435"
+        },
+        {
+          title: "Hyperspace: A Scientific Odyssey Through Parallel Universes, Time Warps, and the Tenth Dimension",
+          description: "A journey through space and time, exploring the universe and our place within it.",
+          image: "https://cdn.mos.cms.futurecdn.net/wdz7goBpcg34XWpnsuN6jB-1200-80.jpg.webp",
+          link: "https://www.amazon.com/Cosmos-Carl-Sagan/dp/0345539435"
+        },
+        {
+          title: "Astronaut Handbook",
+          description: "A journey through space and time, exploring the universe and our place within it.",
+          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBit2gwQ942PCuMKAGHUCfMvnyn5wTeuwezQ&s",
+          link: "https://www.amazon.com/Cosmos-Carl-Sagan/dp/0345539435"
+        },
+        {
+          title: "Packing for Mars",
+          description: "A journey through space and time, exploring the universe and our place within it.",
+          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWV4dgdBrTqEvSflROfST9OdsubMq1Q8yZIQ&s",
+          link: "https://www.amazon.com/Cosmos-Carl-Sagan/dp/0345539435"
+        },
+        {
+          title: "The Astronomy Book",
+          description: "A journey through space and time, exploring the universe and our place within it.",
+          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIdPvAleFwD9y4OosDwPKbOoE7PonbtnbUvg&s",
+          link: "https://www.amazon.com/Cosmos-Carl-Sagan/dp/0345539435"
+        },
+        {
+          title: "Isaac Asimov's Guide to Earth and Space",
+          description: "A journey through space and time, exploring the universe and our place within it.",
+          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTKqWvCs43huANj1xEvaAaO6OMzzDlwvI9oA&s",
+          link: "https://www.amazon.com/Cosmos-Carl-Sagan/dp/0345539435"
+        },
+        {
+          title: "The Martian",
+          description: "Astronaut Mark Watney is stranded on Mars and must find a way to survive until rescue.",
+          image: "https://www.hollywoodreporter.com/wp-content/uploads/2015/11/martian_cover.jpg",
+          link: "https://www.amazon.com/Martian-Andy-Weir/dp/0553418025"
+        }
+      ];
+  
+      $scope.searchBooks = function() {
+      };
+  
+      var input = document.getElementById("searchInput");
+      input.addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+          $scope.searchBooks();
+        }
+      });
+    });
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,105 @@
+body{
+    background-color: black;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+
+header h1 {
+  color: #fff;
+  font-size: 40px;
+  margin: 0;
+  padding: 16px;
+  background-color: #404240;
+
+}
+
+header p {
+  color: #fff;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.slider{
+    position: relative;
+    margin-top: 100px;
+    width: 100%;
+    height: 370px;
+    overflow: hidden;
+}
+.item{
+    position: absolute;
+    width: 200px;
+    height: 320px;
+    text-align: justify;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    transition:  0.5s;
+    left: calc(50% - 110px);
+    top: 0;
+}
+#next{
+    position: absolute;
+    right: 50px;
+    top: 40%;
+}
+#prev{
+    position: absolute;
+    left: 50px;
+    top: 40%;
+}
+#prev, #next{
+    color: #fff;
+    background: none;
+    border: none;
+    font-size: xxx-large;
+    font-family: monospace;
+    font-weight: bold;
+    opacity: 0.5;
+    transition: opacity 0.5s;
+}
+#prev:hover,
+#next:hover{
+    opacity: 1;
+}
+.item1 {
+    background-image: url("https://i.pinimg.com/236x/42/aa/20/42aa20ad0262d86c5bd4625de6814672.jpg");
+  }
+  
+  .item2{
+      background-image: url("https://i.pinimg.com/236x/d9/83/8c/d9838c3f5089e02adc9ddde24e7cba21.jpg");
+    }
+    .item3{
+      background-image: url("https://i.pinimg.com/236x/23/e6/a7/23e6a716dabd6cdf3148e326bc380557.jpg");
+    }
+    .item4{
+      background-image: url("https://i.pinimg.com/236x/a6/7b/1d/a67b1d9977d0b8de0e84d993c43d4ccc.jpg");
+    }
+    
+    .item5{
+      background-image: url("https://i.pinimg.com/236x/86/80/2a/86802ad9365edd7a8585ca2d83926645.jpg");
+    }
+    .item6{
+      background-image: url("https://i.pinimg.com/564x/04/56/8f/04568ff9408d8bea11a468249d07e8bb.jpg");
+    }
+    .item7{
+      background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Dave_Scott_Apollo_15_CDR.jpg/383px-Dave_Scott_Apollo_15_CDR.jpg");
+    }
+    
+    .item8{
+      background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Jim_Irwin_Apollo_15_LMP.jpg/375px-Jim_Irwin_Apollo_15_LMP.jpg");
+    }
+
+    a{
+      color: red;
+      font-size: 18px;
+      margin: 0;
+      margin-right: 8px;
+    }
