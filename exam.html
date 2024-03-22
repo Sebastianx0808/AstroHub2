@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moon Phase Art Gallery</title>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="artgallery.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div>
+      <h1>Moon Phase Art Gallery</h1>
+    </div>
+  </nav>
+</header>
+
+<div class="container">
+  <div class="icon">
+    <div class="imgbx active" style="--i:1;" data-id="content1">
+      <img src="https://i.pinimg.com/236x/ec/e0/69/ece0695ba2a2029c27577f310e2f2acb.jpg" alt="New Moon">
+    </div>
+    
+    <div class="imgbx" style="--i:2;" data-id="content2">
+      <img src="https://i.pinimg.com/236x/29/68/86/29688649d73855abc54f9a870a752bab.jpg" alt="Waxing Crescent">
+    </div>
+
+    <div class="imgbx" style="--i:3;" data-id="content3">
+      <img src="https://i.pinimg.com/236x/77/82/10/778210bd6497bb72e25561c9ce1400b4.jpg" alt="First Quarter">
+    </div>
+
+    <div class="imgbx" style="--i:4;" data-id="content4">
+      <img src="https://i.pinimg.com/564x/29/05/75/290575051b03a96874862bd779d1ebf8.jpg" alt="Waxing Gibbous">
+    </div>
+
+    <div class="imgbx" style="--i:5;" data-id="content5">
+      <img src="https://i.pinimg.com/236x/e0/c0/fc/e0c0fc47f78aab80e744934a9ca76e39.jpg" alt="Full Moon">
+    </div>
+
+    <div class="imgbx" style="--i:6;" data-id="content6">
+      <img src="https://i.pinimg.com/236x/c1/14/d5/c114d5613c3c6b53b48c36b5c430ccbb.jpg" alt="Waning Gibbous">
+    </div>
+
+    <div class="imgbx" style="--i:7;" data-id="content7">
+      <img src="https://i.pinimg.com/236x/81/69/07/8169072a904e89d083af65125d512923.jpg" alt="Last Quarter">
+    </div>
+
+    <div class="imgbx" style="--i:8;" data-id="content8">
+      <img src="https://i.pinimg.com/236x/5e/ef/1b/5eef1b694b2dcdaac751261ae4252022.jpg" alt="Waning Crescent">
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="contentbx active" id="content1">
+      <div class="card">
+        <div class="imgbx">
+          <img src="https://i.pinimg.com/236x/ec/e0/69/ece0695ba2a2029c27577f310e2f2acb.jpg" alt="New Moon">
+        </div>
+        <div class="textbx">
+          <h2>New Moon</h2>
+          <p>The moon is not visible from Earth.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="contentbx" id="content2">
+      <div class="card">
+        <div class="imgbx">
+          <img src="https://i.pinimg.com/236x/29/68/86/29688649d73855abc54f9a870a752bab.jpg" alt="Waxing Crescent">
+        </div>
+        <div class="textbx">
+          <h2>Waxing Crescent</h2>
+          <p>A small part of the moon is illuminated by the sun.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="contentbx" id="content3">
+        <div class="card">
+          <div class="imgbx">
+            <img src="https://i.pinimg.com/236x/77/82/10/778210bd6497bb72e25561c9ce1400b4.jpg" alt="First Quarter">
+          </div>
+          <div class="textbx">
+            <ul class="sci">
+              <h2>First Quarter</h2>
+              <p>Half of the moon is illuminated by the sun.</p>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="contentbx" id="content4">
+        <div class="card">
+          <div class="imgbx">
+            <img src="https://i.pinimg.com/564x/29/05/75/290575051b03a96874862bd779d1ebf8.jpg" alt="Waxing Gibbous">
+          </div>
+          <div class="textbx">
+            <ul class="sci">
+              <h2>Waxing Gibbous</h2>
+              <p>More than half, but not all, of the moon is illuminated by the sun.</p>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="contentbx" id="content5">
+        <div class="card">
+          <div class="imgbx">
+            <img src="https://i.pinimg.com/236x/e0/c0/fc/e0c0fc47f78aab80e744934a9ca76e39.jpg" alt="Full Moon">
+          </div>
+          <div class="textbx">
+            <ul class="sci">
+              <h2>Full Moon</h2>
+              <p>The entire moon is illuminated by the sun.</p>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="contentbx" id="content6">
+        <div class="card">
+          <div class="imgbx">
+            <img src="https://i.pinimg.com/236x/c1/14/d5/c114d5613c3c6b53b48c36b5c430ccbb.jpg" alt="Waning Gibbous">
+          </div>
+          <div class="textbx">
+            <ul class="sci">
+              <h2>Waning Gibbous</h2>
+              <p>More than half, but not all, of the moon is illuminated by the sun.</p>
+            </ul>
+          </div>
+      </div>
+    </div>
+
+    <div class ="contentbx" id ="content7">
+      <div class ="card">
+        <div class ="imgbx">
+          <img src="https://i.pinimg.com/236x/81/69/07/8169072a904e89d083af65125d512923.jpg" alt="Last Quarter">
+
+        </div>
+        <div class ="textbx">
+          <ul class = "sci"><h2>Last Quarter</h2>
+          <p>Half of the moon is illuminated by the sun.</p>  
+        </div></ul>
+      </div>
+    </div>
+
+    <div class ="contentbx" id ="content8">
+      <div class ="card">
+        <div class ="imgbx">
+          <img src="https://i.pinimg.com/236x/5e/ef/1b/5eef1b694b2dcdaac751261ae4252022.jpg" alt="Waning Crescent">
+
+        </div>
+        <div class ="textbx">
+          <ul class = "sci"><h2>Waning Crescent</h2>
+        <p>A small part of the moon is illuminated by the sun.</p>
+        </div></ul>
+      </div>
+    </div>
+  
+
+  </div>
+
+ 
+  <section>
+    <div class="slider">
+      <div class="item item1">
+        <h5><a href="Neil.html">Neil Armstrong</a></h5>
+      </div>
+      <div class="item item2">
+        <h5><a href="Buzz.html">Buzz Aldrin</a></h5>
+      </div>
+      <div class="item item3">
+        <h5><a href="Pete.html">Charles "Pete" Conrad</a></h5>
+      </div>
+      <div class="item item4">
+        <h5><a href="Bean.html">Alan Bean</a></h5>
+      </div>
+      <div class="item item5">
+        <h5><a href="Alan.html">Alan Shepard</a></h5>
+      </div>
+      <div class="item item6">
+        <h5><a href="Edgar.html">Edgar Mitchell</a></h5>
+      </div>
+      <div class="item item7">
+        <h5><a href="David.html">David Scott</a></h5>
+      </div>
+      <div class="item item8">
+        <h5><a href="James.html">James Irwin</a></h5>
+      </div>
+      <button id="next">></button>
+      <button id="prev"><</button>
+    
+  </section>
+  
+  
+  <footer class="footer mt-auto py-8">
+    <div>
+      <p>&copy; astrohub.com</p>
+      <p><a href="h1.html">Back to Home</a></p>
+    </div>
+  </footer>
+
+
+  <script>
+    let imgbx = document.querySelectorAll('.imgbx');
+  let contentbx = document.querySelectorAll('.contentbx');
+  for (let i = 0; i < imgbx.length; i++) {
+    imgbx[i].addEventListener('mouseover', function() {
+      for (let j = 0; j < contentbx.length; j++) {
+        contentbx[j].classList.remove('active');
+      }
+      document.getElementById(this.dataset.id).classList.add('active');
+      for (let j = 0; j < imgbx.length; j++) {
+        imgbx[j].classList.remove('active');
+      }
+      this.classList.add('active');
+    });
+  }
+  </script>
+
+<script>
+  let items = document.querySelectorAll('.slider .item');
+let active = 3;
+function loadShow(){
+items[active].style.transform = `none`;
+items[active].style.zIndex = 1;
+items[active].style.filter = 'none';
+items[active].style.opacity = 1;
+// show after
+let stt = 0;
+for(var i = active + 1; i < items.length; i ++){
+  stt++;
+  items[i].style.transform = `translateX(${120*stt}px) scale(${1 - 0.2*stt}) perspective(16px) rotateY(-1deg)`;
+  items[i].style.zIndex = -stt;
+  items[i].style.filter = 'blur(5px)';
+  items[i].style.opacity = stt > 2 ? 0 : 0.6;
+}
+stt = 0;
+for(var i = (active - 1); i >= 0; i --){
+  stt++;
+  items[i].style.transform = `translateX(${-120*stt}px) scale(${1 - 0.2*stt}) perspective(16px) rotateY(1deg)`;
+  items[i].style.zIndex = -stt;
+  items[i].style.filter = 'blur(5px)';
+  items[i].style.opacity = stt > 2 ? 0 : 0.6;
+}
+}
+loadShow();
+let next = document.getElementById('next');
+let prev = document.getElementById('prev');
+next.onclick = function(){
+active = active + 1 < items.length ?  active + 1 : active;
+loadShow();
+}
+prev.onclick = function(){
+active = active - 1 >= 0 ? active -1 : active;
+loadShow();
+}
+ </script>
+  
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

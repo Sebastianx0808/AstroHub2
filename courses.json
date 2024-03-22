@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Introduction to Web Development",
+        "category": "Programming",
+        "duration": "3 months"
+    },
+    {
+        "name": "Data Science Fundamentals",
+        "category": "Data Science",
+        "duration": "6 weeks"
+    },
+    {
+        "name": "Graphic Design Essentials",
+        "category": "Design",
+        "duration": "2 months"
+    },
+    {
+        "name": "Financial Planning for Beginners",
+        "category": "Finance",
+        "duration": "4 weeks"
+    },
+    {
+        "name": "English Language Proficiency",
+        "category": "Language",
+        "duration": "8 weeks"
+    },
+    {
+        "name": "Introduction to Artificial Intelligence",
+        "category": "Technology",
+        "duration": "5 months"
+    }
+]

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="astro.css">
+  
+
+  <title>Alan Bean - Astronaut</title>
+</head>
+<body>
+
+  <h1>Neil A. <br> Armstrong </h1>
+
+
+<div class="container">
+  <div id="factsCarousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+     
+      <div class="carousel-item active">
+        <div class="fact-card">
+          <h3></h3>
+          <p></p>
+          <div class="hidden-content" id="fact1">
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="fact-card">
+          <h3></h3>
+          <p></p>
+          <div class="hidden-content" id="fact2">
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="fact-card">
+          <h3></h3>
+          <p></p>
+          <div class="hidden-content" id="fact3">
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="fact-card">
+          <h3></h3>
+          <p></p>
+          <div class="hidden-content" id="fact4">
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="fact-card">   
+          <h3></h3>
+          <p></p>
+          <div class="hidden-content" id="fact5">
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="carousel-item">
+        <div class="fact-card">   
+          <h3></h3>
+          <p></p>
+          <div class="hidden-content" id="fact6">
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="fact-card">   
+          <h3></h3>
+          <p></p>
+          <div class="hidden-content" id="fact7">
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="fact-card">   
+          <h3></h3>
+          <p></p>
+          <div class="hidden-content" id="fact8">
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="carousel-item">
+        <div class="fact-card">   
+          <h3></h3>
+          <p></p>
+          <div class="hidden-content" id="fact9">
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="fact-card">   
+          <h3></h3>
+          <p></p>
+          <div class="hidden-content" id="fact10">
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+   </div>
+
+   
+
+
+    <a class="carousel-control-prev" href="#factsCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#factsCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+  const factCarouselInner = document.querySelector('#factsCarousel .carousel-inner');
+  let currentFactIndex = 0;
+
+  function showFact(index) {
+    const translateValue = -index * 100 + '%';
+    factCarouselInner.style.transform = 'translateX(' + translateValue + ')';
+  }
+
+  function nextFact() {
+    currentFactIndex = (currentFactIndex + 1) % document.querySelectorAll('#factsCarousel .carousel-item').length;
+    showFact(currentFactIndex);
+  }
+
+  function prevFact() {
+    currentFactIndex = (currentFactIndex - 1 + document.querySelectorAll('#factsCarousel .carousel-item').length) % document.querySelectorAll('#factsCarousel .carousel-item').length;
+    showFact(currentFactIndex);
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    showFact(currentFactIndex);
+    
+  });
+</script>
+
+</div>
+
+<footer>
+  <h4 class="scroll-text">"Unlock the secrets of the cosmos with our AstroEdu! Dive into our Astronauts-focused 
+    courses for a stellar learning experience."</h4>
+</footer>
+</body>
+</html>
